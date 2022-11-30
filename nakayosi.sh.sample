@@ -1,0 +1,10 @@
+#!/bin/bash
+
+eval "$(/usr/local/bin/rbenv init -)"
+
+cd $(dirname $0)
+
+# your mastodon API token
+export MASTODON_TOKEN=xxxx
+
+ruby ./nakayosi.rb
