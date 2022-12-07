@@ -1,10 +1,16 @@
 #!/bin/bash
 
-eval "$(/usr/local/bin/rbenv init -)"
+eval "$(rbenv init -)"
 
 cd $(dirname $0)
 
-# your mastodon API token
+# your Mastodon server domain
+export MASTODON_DOMAIN=example.com
+
+# your Mastodon API token
 export MASTODON_TOKEN=xxxx
 
-ruby ./nakayosi.rb
+# your images dir path
+export IMAGE_DIR=/path/to/images
+
+bundle exec ruby ./nakayosi.rb
